@@ -1,0 +1,125 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <time.h>
+#include <ctime>
+#include <cstdlib>
+
+using namespace std;
+
+int main(int argc, char** argy)
+{
+  int num1, num2, total;
+  string input = "";
+  stringstream stream;
+  int choice;
+  while(true)
+  {
+    cout << "1. Add" << endl;
+    cout << "2. multiply" << endl;
+    cout << "3. Divide" << endl;
+    cout << "4. Subtract" << endl;
+    cout << "5. Exit" << endl;
+    cout << "-----------------" << endl;
+    cout << "Choice your option:" << endl;
+    cout << "---> ";
+    getline(cin, input);
+    stream.str(input);
+    stream >> choice;
+    stream.clear();
+
+    if (choice == 1)
+    {
+      cout << "-----------------" << endl;
+      cout << "First number: ";
+      getline(cin, input);
+      stream.str(input);
+      stream >> num1;
+      stream.clear();
+
+      cout << "Second number: ";
+      getline(cin, input);
+      stream.str(input);
+      stream >> num2;
+      stream.clear();
+
+      total = num1 + num2;
+
+      cout << num1 << " + " << num2 << " = " << total << endl;
+      cout << "-----------------" << endl;
+    }
+
+    else if (choice == 2)
+    {
+      cout << "-----------------" << endl;
+      cout << "First number: ";
+      getline(cin, input);
+      stream.str(input);
+      stream >> num1;
+      stream.clear();
+
+      cout << "Second number: ";
+      getline(cin, input);
+      stream.str(input);
+      stream >> num2;
+      stream.clear();
+
+      total = num1 * num2;
+
+      cout << num1 << " * " << num2 << " = " << total << endl;
+      cout << "-----------------" << endl;
+    }
+
+    else if (choice == 3)
+    {
+      cout << "-----------------" << endl;
+      cout << "First number: ";
+      getline(cin, input);
+      stream.str(input);
+      stream >> num1;
+      stream.clear();
+
+      cout << "Second number: ";
+      getline(cin, input);
+      stream.str(input);
+      stream >> num2;
+      stream.clear();
+
+      total = num1 / num2;
+
+      cout << num1 << " / " << num2 << " = " << total << endl;
+      cout << "-----------------" << endl;
+    }
+
+    else if (choice == 4)
+    {
+      cout << "-----------------" << endl;
+      cout << "First number: ";
+      getline(cin, input);
+      stream.str(input);
+      stream >> num1;
+      stream.clear();
+
+      cout << "Second number: ";
+      getline(cin, input);
+      stream.str(input);
+      stream >> num2;
+      stream.clear();
+
+      total = num1 - num2;
+
+      cout << num1 << " - " << num2 << " = " << total << endl;
+      cout << "-----------------" << endl;
+    }
+
+    else if (choice == 5)
+    {
+      cout << "thanks for using the calculator " << endl;
+      break;
+    }
+
+  }
+
+}
+
+
